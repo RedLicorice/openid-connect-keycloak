@@ -219,7 +219,7 @@ class OpenID_Connect_Generic_Client_Wrapper {
 			$separator = '&';
 		}
 
-		$url_format = '%1$s%2$sresponse_type=code&code_challenge_method=plain&scope=%3$s&client_id=%4$s&state=%5$s&redirect_uri=%6$s';
+		$url_format = '%1$s%2$sresponse_type=code&scope=%3$s&client_id=%4$s&state=%5$s&redirect_uri=%6$s';
 		if ( ! empty( $atts['acr_values'] ) ) {
 			$url_format .= '&acr_values=%7$s';
 		}
