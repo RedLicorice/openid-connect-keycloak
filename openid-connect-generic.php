@@ -1,4 +1,10 @@
 <?php
+
+// Hardcoded PKCE Support patch
+if ( file_exists( __DIR__ . '/includes/openid-connect-generic-pkce-addon.php' ) ) {
+    require_once __DIR__ . '/includes/openid-connect-generic-pkce-addon.php';
+}
+
 /**
  * OpenID Connect Generic Client
  *
