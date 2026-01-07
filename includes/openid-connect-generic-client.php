@@ -431,7 +431,8 @@ class OpenID_Connect_Generic_Client {
 		if ( ! isset( $token_response['id_token'] ) ||
 			 ! isset( $token_response['token_type'] ) || strcasecmp( $token_response['token_type'], 'Bearer' )
 		) {
-			$error_msg = 'Invalid token response. Full response: ' . print_r( $token_response, true );
+			//$error_msg = 'Invalid token response. Full response: ' . print_r( $token_response, true );
+			$error_msg = 'Invalid token response. Make sure the "openid" scope is requested!';
         	return new WP_Error( 'invalid-token-response', $error_msg, $token_response );
 		}
 
